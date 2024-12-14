@@ -16,5 +16,7 @@ class BankAccount {
 }
 
 const n1 = new BankAccount(200);
+const n2 = new BankAccount(500);
 
 n1.deposit(25);
+n2.deposit(80);
