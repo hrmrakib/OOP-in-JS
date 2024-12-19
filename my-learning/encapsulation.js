@@ -1,22 +1,35 @@
-class BankAccount {
-  #balance;
+// 1. Combining Data and Methods in a Class
 
-  constructor(balance) {
-    this.#balance = balance;
+class Programmer {
+  constructor(name, department) {
+    this.name = name;
+    this.department = department;
   }
 
-  deposit(amount) {
-    this.#balance += amount;
-    console.log(`Deposit ${amount} & Current Balance ${this.#balance}`);
-  }
-
-  getBalance() {
-    console.log(`Balance: ${this.#balance}`);
+  who() {
+    return `I am ${this.name} from ${this.department} department`;
   }
 }
 
-const n1 = new BankAccount(200);
-const n2 = new BankAccount(500);
+const p1 = new Programmer("Rakibul", "Development");
+// console.log(p1.name, p1.department);
+// console.log(p1.who());
 
-n1.deposit(25);
-n2.deposit(80);
+// 2. Access Control Using Private Properties and Methods
+
+class FetureWife {
+  #wife;
+
+  constructor(wife) {
+    this.#wife = wife;
+  }
+
+  wifeName() {
+    return this.#wife;
+  }
+}
+
+const w1 = new FetureWife("Nowshin Aktar Era");
+// console.log(w1.wifeName());
+
+// console.log(w1.#wife); // I have GOT 😭😭😭: SyntaxError: Private field '#wife' must be declared in an enclosing class
