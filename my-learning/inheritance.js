@@ -14,10 +14,13 @@ class Son extends Father {
     this.age = age;
   }
 
-  intelligent() {
-    console.log(`${this.name} is intelligent`);
+  honest() {
+    console.log(`${this.name} is honest and intelligent`);
   }
 }
 
-const son1 = new Son("Rakibul", 23);
+const father1 = new Father("Abdul");
+father1.honest();
+
+const son1 = new Son("Babul", 23);
 son1.honest();
